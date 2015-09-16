@@ -15,9 +15,9 @@ public class VendingMachine
     /**
      * Default constructor for objects of class VendingMachine
      */
-    public VendingMachine()
+    public VendingMachine(int getCans)
     {
-        cans = 0;
+        cans = getCans;
         tokens = 0;
     }
 
@@ -34,7 +34,7 @@ public class VendingMachine
      */
     public void fillUp(int cans)
     {
-        cans += 0;
+        this.cans += cans;
     }
     
     /**
@@ -48,10 +48,25 @@ public class VendingMachine
      * @param   y   description of parameter y
      * @return  description of the return value
      */
-    public double findingCans()
+    public int getCans()
     {
         return cans;
     }
 
+    /**
+     * An example of a method - replace this comment with your own
+     *  that describes the operation of the method
+     *
+     * @pre     preconditions for the method
+     *          (what the method assumes about the method's parameters and class's state)
+     * @post    postconditions for the method
+     *          (what the method guarantees upon completion)
+     * @param   y   description of parameter y
+     * @return  description of the return value
+     */
+    public void insertTokens()
+    {
+        
+    }
 
 }
