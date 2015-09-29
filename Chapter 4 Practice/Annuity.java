@@ -17,7 +17,8 @@ public class Annuity
         
         double output = pmt*((((Math.pow((1+i),(n-1))-1)/i)/(Math.pow((1+i),n-i)))+1);
         
-        System.out.println("Total money: " + output);
+        System.out.printf("Total money: $%.2f", output);
+        
     }
 }
         
