@@ -21,18 +21,19 @@ public class Change
         
         double quarter = change / .25;
         int quarters = (int) quarter;
-        change = change - (quarters / 4);
+        change = change - (quarters * .25);
         
         double dime = change / .1;
         int dimes = (int) dime;
-        change = change - (dimes / 10);
+        change = change - (dimes * .10);
         
         double nickel = change / .05;
         int nickels = (int) nickel;
-        change = change - (nickels / 20);
+        change = change - (nickels * .05);
         
-        double pennies = change * 100;
+        double penny = change * 100;
+        int pennies = (int) penny;
         
-System.out.print("You get " + dollars + " dollar(s), " + quarters + " quarter(s), " + dimes + " dime(s), " + nickels + " nickel(s), and " + pennies + "penny(ies)");
+System.out.print("You get " + dollars + " dollar(s), " + quarters + " quarter(s), " + dimes + " dime(s), " + nickels + " nickel(s), and " + pennies + " penny(ies)");
     }
 }
