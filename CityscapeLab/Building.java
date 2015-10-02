@@ -35,11 +35,11 @@ public class Building
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle building1 = new Rectangle(x, y, 160, 500);
-        Rectangle building2 = new Rectangle(x + 160, y + 30, 160, 50);
-        Rectangle building3 = new Rectangle(x + 320, y + 10, 160, 70);
-        Rectangle building4 = new Rectangle(x + 480, y - 40, 160, 120);
-        Rectangle building5 = new Rectangle(x + 640, y + 20, 160, 60);
+        Rectangle building1 = new Rectangle(x, y + 30, 160, 470);
+        Rectangle building2 = new Rectangle(x + 160, y + 180, 160, 320);
+        Rectangle building3 = new Rectangle(x + 320, y + 100, 160, 400);
+        Rectangle building4 = new Rectangle(x + 480, y, 160, 500);
+        Rectangle building5 = new Rectangle(x + 640, y + 60, 160, 440);
         
         g2.draw(building1);
         g2.draw(building2);
