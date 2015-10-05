@@ -36,9 +36,13 @@ public class Moon
     {
         Ellipse2D.Double moonbright = new Ellipse2D.Double(x,y,100,100);
         g2.draw(moonbright);
+        g2.setColor(Color.yellow);
+        g2.fill(moonbright);
         
-        Ellipse2D.Double moondark = new Ellipse2D.Double(x + 20,y + 10,80,80);
-        g2.draw(moondark);
+        Ellipse2D.Double moondark = new Ellipse2D.Double(x + 21,y + 10,80,80);
+        Color back = new Color(0,0,30);
+        g2.setColor(back);
+        g2.fill(moondark);
     }
 
 }

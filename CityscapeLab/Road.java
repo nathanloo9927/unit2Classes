@@ -35,15 +35,16 @@ public class Road
     public void draw(Graphics2D g2)
     {
         Rectangle sidewalk = new Rectangle(x,y,1000,120);
-        Rectangle road = new Rectangle(x,y + 20,1000,100);
-        Rectangle divider = new Rectangle (x,y + 50,1000,20);
-        Rectangle grass = new Rectangle(x,y + 100,1000,20);
+        Rectangle road = new Rectangle(x,y + 20,1000,80);
+        Rectangle divider = new Rectangle (x - 5,y + 55,1006,10);
         g2.draw(sidewalk);
+        g2.setColor(Color.lightGray);
+        g2.fill(sidewalk);
+        g2.setColor(Color.black);
         g2.draw(road);
+        g2.fill(road);
         g2.setColor(Color.yellow);
         g2.draw(divider);
-        g2.setColor(Color.black);
-        g2.draw(grass);
     }
 
 }

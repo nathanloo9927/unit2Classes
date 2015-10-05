@@ -16,15 +16,17 @@ public class Building
     /** description of instance variable x (add comment for each instance variable) */
     private int x;
     private int y;
+    private int z;
 
     /**
      * Default constructor for objects of class Building
      */
-    public Building(int xValue, int yValue)
+    public Building(int xValue, int yValue, int height)
     {
         // initialise instance variables
         x = xValue;
         y = yValue;
+        z = height;
     }
 
     /**
@@ -35,12 +37,12 @@ public class Building
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle building1 = new Rectangle(x, y + 30, 160, 470);
-        Rectangle building2 = new Rectangle(x + 160, y + 180, 160, 320);
-        Rectangle building3 = new Rectangle(x + 320, y + 100, 160, 400);
-        Rectangle building4 = new Rectangle(x + 480, y, 160, 500);
-        Rectangle building5 = new Rectangle(x + 640, y + 60, 160, 440);
-        
+        Rectangle building1 = new Rectangle(x, y + 30, z, 470);
+        Rectangle building2 = new Rectangle(x + 160, y + 180, z, 320);
+        Rectangle building3 = new Rectangle(x + 320, y + 100, z, 400);
+        Rectangle building4 = new Rectangle(x + 480, y, z, 500);
+        Rectangle building5 = new Rectangle(x + 640, y + 60, z, 440);
+        g2.setColor(Color.white);
         g2.draw(building1);
         g2.draw(building2);
         g2.draw(building3);
