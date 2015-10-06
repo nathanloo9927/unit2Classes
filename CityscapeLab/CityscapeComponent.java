@@ -32,7 +32,7 @@ public class CityscapeComponent extends JComponent
         // invoke the draw method on each object in your Cityscape
         // ...
         Background backdrop = new Background(0,0);
-        Building buildings = new Building(100,100,160);
+        Building buildings = new Building(80,100,160);
         Moon moon = new Moon(875,5);
         Road road = new Road(0,600);
         int xValue = getWidth();

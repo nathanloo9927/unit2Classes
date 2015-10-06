@@ -39,7 +39,7 @@ public class Moon
         g2.setColor(Color.yellow);
         g2.fill(moonbright);
         
-        Ellipse2D.Double moondark = new Ellipse2D.Double(x + 21,y + 10,80,80);
+        Ellipse2D.Double moondark = new Ellipse2D.Double(x + 23,y + 10,80,80);
         Color back = new Color(0,0,30);
         g2.setColor(back);
         g2.fill(moondark);
