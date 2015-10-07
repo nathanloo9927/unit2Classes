@@ -39,6 +39,7 @@ public class CityscapeComponent extends JComponent
         int yValue = getHeight();
         buildings.draw(g2);
         road.draw(g2);
+        moon.draw(g2);
     }
     
     /**
@@ -49,18 +50,13 @@ public class CityscapeComponent extends JComponent
     {
         // update the objects in the cityscape so they are animated
         // ...
-        int x = 20;
         Random r1 = new Random();
-        while (x < 20) {
-        r1.nextInt(1000);
-        int number = r1;
-        number += 1;
+
+        int number = r1.nextInt(1000) + 1;
         moon = new Moon(number,5,100,100);
-        moon.draw(g2);
-        x += 1;
+        
         // request that the Java Runtime repaints this component by invoking its paintComponent method
-        moon.repaint();
-    }
+        this.repaint();
     }
 
 }

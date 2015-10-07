@@ -43,5 +43,4 @@ public class Moon
         g2.setColor(Color.yellow);
         g2.fill(moonbright);
     }
-
 }
