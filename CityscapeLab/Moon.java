@@ -16,15 +16,19 @@ public class Moon
     /** description of instance variable x (add comment for each instance variable) */
     private int x;
     private int y;
+    private int l;
+    private int h;
 
     /**
      * Default constructor for objects of class Moon
      */
-    public Moon(int xValue, int yValue)
+    public Moon(int xValue, int yValue, int length, int height)
     {
         // initialise instance variables
         x = xValue;
         y = yValue;
+        l = length;
+        h = height;
     }
 
     /**
@@ -34,15 +38,10 @@ public class Moon
      */
     public void draw (Graphics2D g2)
     {
-        Ellipse2D.Double moonbright = new Ellipse2D.Double(x,y,100,100);
+        Ellipse2D.Double moonbright = new Ellipse2D.Double(x,y,l,h);
         g2.draw(moonbright);
         g2.setColor(Color.yellow);
         g2.fill(moonbright);
-        
-        Ellipse2D.Double moondark = new Ellipse2D.Double(x + 23,y + 10,80,80);
-        Color back = new Color(0,0,30);
-        g2.setColor(back);
-        g2.fill(moondark);
     }
 
 }

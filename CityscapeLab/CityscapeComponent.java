@@ -1,20 +1,22 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
+import java.util.Random;
 
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
  * 
- * @author @gcschmit
- * @version 18 July 2014
+ * @author @Nathan
+ * @version 10/1/15
  */
 public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    
-    
+    private Building buildings;
+    private Moon moon;
+    private Road road;
     
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
@@ -31,15 +33,11 @@ public class CityscapeComponent extends JComponent
         
         // invoke the draw method on each object in your Cityscape
         // ...
-        Background backdrop = new Background(0,0);
-        Building buildings = new Building(80,100,160);
-        Moon moon = new Moon(875,5);
-        Road road = new Road(0,600);
+        buildings = new Building(80,100,160,65);
+        road = new Road(0,600);
         int xValue = getWidth();
         int yValue = getHeight();
-        backdrop.draw(g2);
         buildings.draw(g2);
-        moon.draw(g2);
         road.draw(g2);
     }
     
@@ -51,11 +49,18 @@ public class CityscapeComponent extends JComponent
     {
         // update the objects in the cityscape so they are animated
         // ...
-        
-        
-        
+        int x = 20;
+        Random r1 = new Random();
+        while (x < 20) {
+        r1.nextInt(1000);
+        int number = r1;
+        number += 1;
+        moon = new Moon(number,5,100,100);
+        moon.draw(g2);
+        x += 1;
         // request that the Java Runtime repaints this component by invoking its paintComponent method
-        repaint();
+        moon.repaint();
+    }
     }
 
 }

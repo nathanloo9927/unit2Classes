@@ -1,10 +1,12 @@
 import javax.swing.JFrame;
+import java.util.Scanner;
+import java.awt.Color;
 
 /**
  * Class that contains the main method for the program and creates the frame containing the component.
  * 
- * @author @gcschmit
- * @version 18 July 2014
+ * @author @Nathan
+ * @version 10/1/15
  */
 public class CityscapeViewer
 {
@@ -26,8 +28,15 @@ public class CityscapeViewer
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
-        
-        
+        Scanner s = new Scanner(System.in);
+        System.out.print("Would you like to set it to day (1) or night (any other integer): ");
+        int set = s.nextInt();
+        if (set == 1){
+            frame.getContentPane().setBackground(Color.cyan);
+        } else {
+            Color back = new Color(0,0,30);
+            frame.getContentPane().setBackground(back);
+        }
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
         CityscapeComponent component = new CityscapeComponent( /* pass the user-specified value */ );
